@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 30px 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.country-img {
+    width: 300px;
+    height: 150px;
+    object-fit: contain;
+    background-color: rgb(244, 244, 244);
+}
