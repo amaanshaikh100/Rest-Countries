@@ -2,7 +2,6 @@
 // const URL = "https://restcountries.com/v3.1/name/usa";
 
 const countries = ["iraq", "germany", "saudi arabia", "brazil", "palestine", "turkey", "south korea", "iran"];
-
 const container = document.querySelector(".container");
 
 const savedCountriesPromises = countries.map((country) => {
@@ -28,10 +27,12 @@ function CountryDetails(countryObj) {
     const h3 = document.createElement("h3");
     const span = document.createElement("span");
     const capital = document.createElement("div");
+    const continents = document.createElement("p");
 
     span.textContent = countryObj.borders;
     span.classList.add("borders");
     capital.innerHTML = countryObj.capital;
+    continents.textContent = countryObj.continents;
 
     h3.classList.add("country-name");
     h3.textContent = countryObj.name.common;
@@ -44,6 +45,7 @@ function CountryDetails(countryObj) {
     div.appendChild(h3);
     div.appendChild(span);
     div.appendChild(capital);
+    div.appendChild(continents);
     container.append(div);
     console.log(countryObj);
 }
